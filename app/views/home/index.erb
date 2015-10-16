@@ -1,0 +1,16 @@
+<h1>Welcome</h1>
+<h3>List of Users</h3>
+<%
+@parse.each do |p| %>
+
+<%if (p["id"] == @logt["id"])%>
+<p style="color:red">
+<% else %>
+<p>
+<% end %>
+Name: 
+<%=p["name"]%>
+<br />Login Count: 
+<%=p["login_count"]%>
+</p>
+<% end %>

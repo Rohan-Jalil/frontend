@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if (@logt != nil) %>
+<%= link_to "Log Out", "/logout" %>
+<% else %> 
+<%= link_to "Signup", "/signup" %>
+<%= link_to "Login", "/login" %>
+
+<%end%>
+<%= yield %>
+
+</body>
+</html>
