@@ -8,7 +8,7 @@ require 'rest-client'
 		end
 		if (params[:email] != nil)
 			@error = params
-		 @success = RestClient.post "http://localhost:3000/api/login",{:token=>"1",:email => params[:email],:password=>params[:password]} rescue @error = "Invalid Login Information"
+		 @success = RestClient.post "http://backend-rails.heroku.com/api/login",{:token=>"1",:email => params[:email],:password=>params[:password]} rescue @error = "Invalid Login Information"
 	end
 	if (@success)
 		redirect_to '/'
