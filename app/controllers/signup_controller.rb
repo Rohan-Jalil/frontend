@@ -7,7 +7,7 @@ def index
 		end
 		if (params[:email] != nil)
 			@error = params
-		 @success = RestClient.post "http://backend-rails.heroku.com/api/user",{:token=>"1",:email => params[:email],:password=>params[:password],:name=>params[:name]} rescue @error = "Invalid Login Information"
+		 @success = RestClient.post "http://backend-rails.herokuapp.com/api/user",{:token=>"1",:email => params[:email],:password=>params[:password],:name=>params[:name]} rescue @error = "Invalid Login Information"
 	end
 	if (@success)
 		# 
